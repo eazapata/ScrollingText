@@ -35,13 +35,21 @@
                 android:text="@string/article_subtitle"
                 android:textAppearance="@android:style/TextAppearance" />
 
-            <TextView
+            <EditText
                 android:id="@+id/article"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
+                android:enabled="false"
                 android:lineSpacingExtra="@dimen/line_spacing"
                 android:text="@string/article_text" />
+
+            <Button
+                android:id="@+id/addCommentButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/commentButton"
+                />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
