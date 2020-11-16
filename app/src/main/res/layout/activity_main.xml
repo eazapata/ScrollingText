@@ -45,7 +45,8 @@
                 android:lineSpacingExtra="@dimen/line_spacing"
                 android:text="@string/article_text"
 
-                android:autofillHints="" />
+                android:autofillHints=""
+                android:layout_toEndOf="@id/article_subheading" />
             <Button
                 android:id="@+id/addCommentButton"
                 android:layout_width="wrap_content"
