@@ -26,25 +26,23 @@ public class MainActivity extends AppCompatActivity {
         commentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                article.setEnabled(true);
+
                 addComment(article,commentButton);
-
-
             }
         });
 
     }
     protected void addComment(EditText article, Button commentButton) {
 
-        commentButton.setText("Save Comment.");
-        int commentLength = article.length();
-        article.setText(article.getText() + "\n");
-
-        if(initialLength < commentLength){
+        if(commentButton.getText().equals("SAVE COMMENT.")){
             article.setEnabled(false);
-            commentButton.setText("Add Comment.");
-            initialLength = article.length();
-        }
+            commentButton.setText("ADD COMMENT!");
 
+        }else{
+            article.setEnabled(true);
+            commentButton.setText("SAVE COMMENT.");
+            article.setText(article.getText() + "\n");
+
+        }
     }
 }
